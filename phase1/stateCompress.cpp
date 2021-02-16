@@ -14,7 +14,7 @@ int hamilton(int n, int weight[20][20]) {
     f[1][0] = 0;
     for (int i = 1; i < (1 << n); ++i) {
         for (int j = 0; j < n; ++j) {
-//            走过j点 todo
+//            走过j点 todo 正确有待解决
             if (i >> j & 1) {
                 for (int k = 0; k < n; ++k) {
                     if (i >> k & 1) {
@@ -64,6 +64,5 @@ int main() {
     // x的二进制有多少位1
 //    int lowbitZero = _builtin_ctz(n);
 //    int bitOf1 = _builtin_popcount(n);
-    cout<<
     return 0;
 }
